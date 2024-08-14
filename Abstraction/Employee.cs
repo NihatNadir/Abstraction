@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -52,7 +52,18 @@ namespace Abstraction
 
     }
 
-    class Profession : Employee // Çalışanın mesleğini gireceği class
+    class SoftwareDeveloper : Employee // Çalışanın mesleğini gireceği class
+    {
+
+        public override void Mission()
+        {
+
+            Departman = Console.ReadLine() ?? ""; // Nesnenin bilgilerini konsoldan giriyoruz.
+            Console.WriteLine($"{Name} {SurName} {Departman} olarak çalışıyorsunuz.");
+        }
+    }
+
+    class ProjectManager : Employee // Çalışanın mesleğini gireceği class
     {
 
         public override void Mission()
